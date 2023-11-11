@@ -25,6 +25,12 @@ class ExpenseController {
         this.service.deleteExpense(id);
     }
 
+    updateExpense(_id, newText, newAmount) {
+        this.expenseService.updateExpense(_id, newText, newAmount); //Actualizar el gasto 
+      }
+    
+    
+
     init() { 
         this.onExpenseListChanged(this.model.expenses);
     }
