@@ -1,18 +1,28 @@
 function multiplyBy10(array) {
-  // your code here
+  return array.map(element => element * 10);
 }
 
 function shiftRight(array) {
-  // your code here
+  if (array.length === 0) {
+    return array;
+  }
+
+  const lastElement = array.pop();
+  array.unshift(lastElement);
+
+  return array;
 }
 
 function onlyVowels(array) {
-  // your code here
+  const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+
+  return array.map(word => word.split('').filter(char => vowels.has(char)).join(''));
 }
 
 function doubleMatrix(array) {
-  // your code here
+  return array.map(row => row.map(number => number * 2));
 }
+
 
 module.exports = {
   multiplyBy10,
